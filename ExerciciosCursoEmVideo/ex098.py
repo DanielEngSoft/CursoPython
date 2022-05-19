@@ -16,8 +16,9 @@ i = int(input('INICIO: '))
 f = int(input('FIM: '))
 p = int(input('Passo: '))
 if i > f:
-    p *= -1
     f -= 1
+    if p >= 0:
+        p *= -1
 else:
     f += 1
 Contador(i, f, p)

@@ -15,6 +15,8 @@ print('Agora é sua vez de personalizar a contagem!')
 i = int(input('INICIO: '))
 f = int(input('FIM: '))
 p = int(input('Passo: '))
+if p == 0:
+    p = 1
 if i > f:
     f -= 1
     if p >= 0:

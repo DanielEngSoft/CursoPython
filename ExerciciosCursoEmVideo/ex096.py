@@ -1,6 +1,6 @@
-def Area(l, c):
-    area = l*c
-    print(f'A áreade um terreno {l}m x {c}m é de {area}m²')
+def Area(largura, comprimento):
+    area = largura * comprimento
+    print(f'A áreade um terreno {largura}m x {comprimento}m é de {area}m²')
 
 
 print(f'{"CONTROLE DE TERRENO":-^40}')

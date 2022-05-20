@@ -1,7 +1,8 @@
-def Escreva(frase1):
-    print('~' * len(frase1))
-    print(frase1)
-    print('~' * len(frase1))
+def Escreva(frase):
+    t = len(frase) + 4
+    print('~' * t)
+    print(' ', frase)
+    print('~' * t)
 
 
 c = str(input('Frase: '))

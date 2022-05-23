@@ -1,16 +1,18 @@
-from datetime import date
-
-
-def voto(id):
-    if id < 18:
+def voto(nasc):
+    """
+    :param nasc: ANO DE NASCIMENTO, USADO PARA CALCULAR A IDADE
+    :return: RETORNA SE A PESSOA VOTA OU NÃO
+    """
+    from datetime import date
+    id = date.today().year - nasc
+    if id < 16:
         resp = 'NÃO VOTA'
-    elif id < 65:
-        resp = 'VOTO OBRIGATORIO'
-    else:
+    elif 16 < id > 65:
         resp = 'VOTO OPCIONAL'
-    return resp
+    else:
+        resp = 'VOTO OBRIGATORIO'
+    return f'Com {id} anos: {resp}'
 
 
-i = int(input('Ano de nascimento: '))
-idade = date.today().year - i
-print(f'COM {idade} ANOS: {voto(idade)} ')
+anoNascimento = int(input('Ano de nascimento: '))
+print(voto(anoNascimento))

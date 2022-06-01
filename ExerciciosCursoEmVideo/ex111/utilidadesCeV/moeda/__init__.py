@@ -38,7 +38,7 @@ def resumo(preco, v1, v2):
     print('-'*35)
     print(f"{'RESUMO':^35}")
     print('-'*35)
-    print(f'{"Preço analisado":.<20}{preco:.>15}')
+    print(f'{"Preço analisado":.<20}{moeda(preco):.>15}')
     print(f'{"DOBRO":.<20}{dobro(preco):.>15} ')
     print(f'{"METADE":.<20}{metade(preco):.>15} ')
     print(f'{f"AUMENTANDO {v1}%":.<20}{aumentar(preco, 10):.>15} ')

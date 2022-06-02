@@ -1,5 +1,4 @@
 from time import sleep
-from lib.interface import *
 from lib.arquivo import *
 
 while True:

@@ -1,5 +1,3 @@
-from typing import List
-
 from ExerciciosCursoEmVideo.ex115.lib.interface import *
 
 
@@ -25,33 +23,33 @@ def criarArquivo(nome):
 
 def lerArquivo(nome):
     try:
-        arq = open(nome, 'rt')
+        arquivo = open(nome, 'rt')
     except FileNotFoundError:
         print("ERRO ao abrir arquivo")
     else:
         cabeçalio("Pessoas Cadastradas")
-        print(arq.read())
+        print(arquivo.read())
     finally:
-        arq.close()
+        arquivo.close()
 
 
 def alterarArquivo(nome):
     try:
-        arq = open(nome, 'at')
+        novoCadastro = open(nome, 'at')
     except FileNotFoundError:
         print("ERRO ao ler arquivo")
     else:
         cabeçalio("Cadastrar Pessoa")
-        arq = open(nome, 'at')
+        novoCadastro = open(nome, 'at')
         nome = str(input('Digite o nome: ')).strip().capitalize()
         idade = leiaInt('Digite a idade: ')
         try:
-            arq.write(f'{nome:.<35}{idade:.>5}\n')
+            novoCadastro.write(f'{nome:.<35}{idade:.>5}\n')
         except:
             print('Erro ao cadastrar dado!')
         else:
             print(f'{nome} cadastrado com sucesso!')
     finally:
-        arq.close()
+        novoCadastro.close()
 
 

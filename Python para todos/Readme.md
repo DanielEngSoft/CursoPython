@@ -1,1 +1,1 @@
-***** Diretório criado para os exercícios do livro Python para todos
+Diretório criado para os exercícios do livro Python para todos
